@@ -6,11 +6,14 @@
 //  Copyright © 2017 Oleg Gudejchuk. All rights reserved.
 //
 import UIKit
+import Foundation
 
 class BarIco : UIImageView {
     
     override init (image: UIImage?) {
         super.init(image: image)
+        settingsApply()
+        self.layoutIfNeeded()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -20,8 +23,12 @@ class BarIco : UIImageView {
 
 extension BarIco {
     fileprivate func settingsApply() {
-        
+        self.contentMode = UIViewContentMode.scaleAspectFit
+        self.frame = CGRect.init(x: 0, y: 0, width: 28, height: 28)
+        self.target(forAction: #selector(t), withSender: self)
+    }
+    
+    func t() {
+        print("ddd")
     }
 }
-
-
