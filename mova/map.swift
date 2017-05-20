@@ -73,6 +73,9 @@ extension Map {
 
 extension Map : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        return UIView()
+        let m = UIView.init(frame: CGRect.init(x: 10, y: 30, width: 50, height: 50))
+        m.backgroundColor = UIColor.brown
+        
+        return m
     }
 }
