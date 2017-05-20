@@ -12,7 +12,6 @@
 		35412E851ECB67DB007423F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35412E841ECB67DB007423F7 /* Assets.xcassets */; };
 		35412E881ECB67DB007423F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35412E861ECB67DB007423F7 /* LaunchScreen.storyboard */; };
 		35412E901ECB67FA007423F7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 35412E8F1ECB67FA007423F7 /* Podfile */; };
-		354805221ECBAD8200E6D8DF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354805211ECBAD8200E6D8DF /* MainStoryboard.storyboard */; };
 		35595DE11ECF61BB002DB188 /* ListButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE01ECF61BB002DB188 /* ListButtons.swift */; };
 		35595DE31ED05AEB002DB188 /* GeneralExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE21ED05AEB002DB188 /* GeneralExtension.swift */; };
 		35595DE51ED06A8E002DB188 /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE41ED06A8E002DB188 /* map.swift */; };
@@ -32,7 +31,6 @@
 		35412E871ECB67DB007423F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35412E891ECB67DB007423F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35412E8F1ECB67FA007423F7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		354805211ECBAD8200E6D8DF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		35595DE01ECF61BB002DB188 /* ListButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListButtons.swift; sourceTree = "<group>"; };
 		35595DE21ED05AEB002DB188 /* GeneralExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtension.swift; sourceTree = "<group>"; };
 		35595DE41ED06A8E002DB188 /* map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				35412E841ECB67DB007423F7 /* Assets.xcassets */,
 				35412E861ECB67DB007423F7 /* LaunchScreen.storyboard */,
 				35412E891ECB67DB007423F7 /* Info.plist */,
-				354805211ECBAD8200E6D8DF /* MainStoryboard.storyboard */,
 				35595DE21ED05AEB002DB188 /* GeneralExtension.swift */,
 			);
 			path = mova;
@@ -193,7 +190,6 @@
 			files = (
 				35412E881ECB67DB007423F7 /* LaunchScreen.storyboard in Resources */,
 				35412E851ECB67DB007423F7 /* Assets.xcassets in Resources */,
-				354805221ECBAD8200E6D8DF /* MainStoryboard.storyboard in Resources */,
 				35412E901ECB67FA007423F7 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
