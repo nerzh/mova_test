@@ -15,7 +15,9 @@ class ListButton : UICollectionView {
     let heightButton : CGFloat    = 40
     let buttonPadding : CGFloat   = 5
     var widthOfCollectionViewCell = [CGFloat]()
-    let hardcodedArray            = ["word 1","word word 2", "word 3","word 4", "word word word 5","word 6", "word 7","word 8", "word 9", "word 10","word 11", "word word 12"]
+    let hardcodedArray            = [
+        "word 1","word word 2", "word 3","word 4", "word word word 5","word 6", "word 7","word 8", "word 9", "word 10","word 11", "word word 12"
+    ]
     
     init(frame: CGRect) {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
