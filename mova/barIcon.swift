@@ -9,11 +9,15 @@ import UIKit
 import Foundation
 
 class BarIco : UIImageView {
+    let width  : CGFloat
+    let height : CGFloat
     
-    override init (image: UIImage?) {
+    init (image: UIImage?, width: CGFloat = 0, height: CGFloat = 0) {
+        self.width  = width
+        self.height = height
+        
         super.init(image: image)
         settingsApply()
-        self.layoutIfNeeded()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -24,11 +28,6 @@ class BarIco : UIImageView {
 extension BarIco {
     fileprivate func settingsApply() {
         self.contentMode = UIViewContentMode.scaleAspectFit
-        self.frame = CGRect.init(x: 0, y: 0, width: 28, height: 28)
-        self.target(forAction: #selector(t), withSender: self)
-    }
-    
-    func t() {
-        print("ddd")
+        self.frame       = CGRect.init(x: 0, y: 0, width: width, height: height)
     }
 }
