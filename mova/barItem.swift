@@ -13,13 +13,12 @@ class BarItem : UIView {
     let label  = UILabel.init()
     let button = UIButton.init()
     let font   = UIFont.init(name: "Helvetica Neue", size: 15)
-    let ico      : BarIco
+    let ico    = BarIco.init(image: nil, width: 28, height: 28)
     var action   : ((Any)->())?
     
     init(labelText: String = "", image: UIImage?, handler: ((Any)->())? = nil) {
-        ico        = BarIco.init(image: image)
         super.init(frame: CGRect.init())
-        settingsApply(labelText, handler: handler)
+        settingsApply(labelText, image: image, handler: handler)
         self.layoutIfNeeded()
     }
     
@@ -29,7 +28,8 @@ class BarItem : UIView {
 }
 
 extension BarItem {
-    fileprivate func settingsApply(_ text: String, handler: ((Any)->())?) {
+    fileprivate func settingsApply(_ text: String, image: UIImage?, handler: ((Any)->())?) {
+        ico.image            = image
         label.text           = text
         label.font           = font
         label.textColor      = UIColor.white
