@@ -35,8 +35,6 @@ extension MainViewController {
         self.view.addSubview(listButtons)
         self.view.addSubview(map)
         setConstraints()
-        self.view.layoutIfNeeded()
-        self.view.setNeedsLayout()
         map.initMap()
     }
     
@@ -66,6 +64,8 @@ extension MainViewController {
         ]
         
         NSLayoutConstraint.activate(initialConstraints)
+        self.view.layoutIfNeeded()
+        self.view.setNeedsLayout()
     }
 }
 
