@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353DA0461ED1D7720098B7EC /* pinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DA0451ED1D7720098B7EC /* pinView.swift */; };
 		35412E7E1ECB67DB007423F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35412E7D1ECB67DB007423F7 /* AppDelegate.swift */; };
 		35412E801ECB67DB007423F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35412E7F1ECB67DB007423F7 /* MainViewController.swift */; };
 		35412E851ECB67DB007423F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35412E841ECB67DB007423F7 /* Assets.xcassets */; };
 		35412E881ECB67DB007423F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35412E861ECB67DB007423F7 /* LaunchScreen.storyboard */; };
 		35412E901ECB67FA007423F7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 35412E8F1ECB67FA007423F7 /* Podfile */; };
+		3557B2E11ED17FA30023DB53 /* infoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557B2E01ED17FA30023DB53 /* infoWindow.swift */; };
 		35595DE11ECF61BB002DB188 /* ListButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE01ECF61BB002DB188 /* ListButtons.swift */; };
 		35595DE31ED05AEB002DB188 /* GeneralExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE21ED05AEB002DB188 /* GeneralExtension.swift */; };
 		35595DE51ED06A8E002DB188 /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595DE41ED06A8E002DB188 /* map.swift */; };
@@ -24,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		12BC57D981852303623CAE56 /* Pods_mova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		353DA0451ED1D7720098B7EC /* pinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinView.swift; sourceTree = "<group>"; };
 		35412E7A1ECB67DB007423F7 /* mova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35412E7D1ECB67DB007423F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35412E7F1ECB67DB007423F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		35412E871ECB67DB007423F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35412E891ECB67DB007423F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35412E8F1ECB67FA007423F7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3557B2E01ED17FA30023DB53 /* infoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoWindow.swift; sourceTree = "<group>"; };
 		35595DE01ECF61BB002DB188 /* ListButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListButtons.swift; sourceTree = "<group>"; };
 		35595DE21ED05AEB002DB188 /* GeneralExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtension.swift; sourceTree = "<group>"; };
 		35595DE41ED06A8E002DB188 /* map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
@@ -63,6 +67,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		353DA0471ED23D800098B7EC /* realmModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = realmModels;
+			sourceTree = "<group>";
+		};
 		35412E711ECB67DB007423F7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 		35412E7C1ECB67DB007423F7 /* mova */ = {
 			isa = PBXGroup;
 			children = (
+				353DA0471ED23D800098B7EC /* realmModels */,
 				35827D531ECE167E0030EC62 /* myComponents */,
 				35412E7D1ECB67DB007423F7 /* AppDelegate.swift */,
 				35412E7F1ECB67DB007423F7 /* MainViewController.swift */,
@@ -96,15 +108,41 @@
 			path = mova;
 			sourceTree = "<group>";
 		};
-		35827D531ECE167E0030EC62 /* myComponents */ = {
+		3557B2DD1ED17F0C0023DB53 /* header */ = {
 			isa = PBXGroup;
 			children = (
-				35827D541ECE1ED30030EC62 /* icons */,
 				359BB8481ECE668B00C9901F /* mainBar.swift */,
 				359BB84C1ECEDAAF00C9901F /* searchField.swift */,
 				359BB8501ECEEA2700C9901F /* barItem.swift */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		3557B2DE1ED17F590023DB53 /* listButtons */ = {
+			isa = PBXGroup;
+			children = (
 				35595DE01ECF61BB002DB188 /* ListButtons.swift */,
+			);
+			name = listButtons;
+			sourceTree = "<group>";
+		};
+		3557B2DF1ED17F700023DB53 /* map */ = {
+			isa = PBXGroup;
+			children = (
 				35595DE41ED06A8E002DB188 /* map.swift */,
+				3557B2E01ED17FA30023DB53 /* infoWindow.swift */,
+				353DA0451ED1D7720098B7EC /* pinView.swift */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		35827D531ECE167E0030EC62 /* myComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3557B2DF1ED17F700023DB53 /* map */,
+				3557B2DE1ED17F590023DB53 /* listButtons */,
+				3557B2DD1ED17F0C0023DB53 /* header */,
+				35827D541ECE1ED30030EC62 /* icons */,
 			);
 			name = myComponents;
 			sourceTree = "<group>";
@@ -258,6 +296,8 @@
 				359BB8491ECE668B00C9901F /* mainBar.swift in Sources */,
 				35412E7E1ECB67DB007423F7 /* AppDelegate.swift in Sources */,
 				35595DE11ECF61BB002DB188 /* ListButtons.swift in Sources */,
+				3557B2E11ED17FA30023DB53 /* infoWindow.swift in Sources */,
+				353DA0461ED1D7720098B7EC /* pinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
