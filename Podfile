@@ -4,6 +4,7 @@ project('mova.xcodeproj')
 
 target('mova') do
   pod 'RealmSwift'
+  pod 'Realm'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
 end

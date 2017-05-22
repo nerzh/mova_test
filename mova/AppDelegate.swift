@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         GMSServices.provideAPIKey("AIzaSyDS7wxxXS3KaWnZ_M8M-tzTJh-rTnC1CWA")
+        RealmSettings.settings()
         
         window                     = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor    = UIColor.white

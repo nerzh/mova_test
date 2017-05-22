@@ -21,6 +21,8 @@
 		359BB8491ECE668B00C9901F /* mainBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BB8481ECE668B00C9901F /* mainBar.swift */; };
 		359BB84D1ECEDAAF00C9901F /* searchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BB84C1ECEDAAF00C9901F /* searchField.swift */; };
 		359BB8511ECEEA2700C9901F /* barItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BB8501ECEEA2700C9901F /* barItem.swift */; };
+		35EB9BE71ED2F70000776C3D /* pinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9BE61ED2F70000776C3D /* pinsModel.swift */; };
+		35EB9BE91ED2F7F900776C3D /* RealmSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9BE81ED2F7F900776C3D /* RealmSettings.swift */; };
 		CAC86126EA501729BDD86DCD /* Pods_mova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BC57D981852303623CAE56 /* Pods_mova.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +35,7 @@
 		35412E841ECB67DB007423F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35412E871ECB67DB007423F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35412E891ECB67DB007423F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35412E8F1ECB67FA007423F7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		35412E8F1ECB67FA007423F7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3557B2E01ED17FA30023DB53 /* infoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoWindow.swift; sourceTree = "<group>"; };
 		35595DE01ECF61BB002DB188 /* ListButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListButtons.swift; sourceTree = "<group>"; };
 		35595DE21ED05AEB002DB188 /* GeneralExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtension.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		359BB8481ECE668B00C9901F /* mainBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainBar.swift; sourceTree = "<group>"; };
 		359BB84C1ECEDAAF00C9901F /* searchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchField.swift; sourceTree = "<group>"; };
 		359BB8501ECEEA2700C9901F /* barItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = barItem.swift; sourceTree = "<group>"; };
+		35EB9BE61ED2F70000776C3D /* pinsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinsModel.swift; sourceTree = "<group>"; };
+		35EB9BE81ED2F7F900776C3D /* RealmSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSettings.swift; sourceTree = "<group>"; };
 		AA609444661F2DBDDF5AC4B7 /* Pods-mova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mova.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mova/Pods-mova.debug.xcconfig"; sourceTree = "<group>"; };
 		C972B9D23CF8794CE5EF0400 /* Pods-mova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mova.release.xcconfig"; path = "Pods/Target Support Files/Pods-mova/Pods-mova.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,7 @@
 		353DA0471ED23D800098B7EC /* realmModels */ = {
 			isa = PBXGroup;
 			children = (
+				35EB9BE61ED2F70000776C3D /* pinsModel.swift */,
 			);
 			name = realmModels;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				35412E861ECB67DB007423F7 /* LaunchScreen.storyboard */,
 				35412E891ECB67DB007423F7 /* Info.plist */,
 				35595DE21ED05AEB002DB188 /* GeneralExtension.swift */,
+				35EB9BE81ED2F7F900776C3D /* RealmSettings.swift */,
 			);
 			path = mova;
 			sourceTree = "<group>";
@@ -288,12 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				35595DE51ED06A8E002DB188 /* map.swift in Sources */,
+				35EB9BE71ED2F70000776C3D /* pinsModel.swift in Sources */,
 				359BB8511ECEEA2700C9901F /* barItem.swift in Sources */,
 				359BB84D1ECEDAAF00C9901F /* searchField.swift in Sources */,
 				35827D561ECE1EFE0030EC62 /* barIcon.swift in Sources */,
 				35412E801ECB67DB007423F7 /* MainViewController.swift in Sources */,
 				35595DE31ED05AEB002DB188 /* GeneralExtension.swift in Sources */,
 				359BB8491ECE668B00C9901F /* mainBar.swift in Sources */,
+				35EB9BE91ED2F7F900776C3D /* RealmSettings.swift in Sources */,
 				35412E7E1ECB67DB007423F7 /* AppDelegate.swift in Sources */,
 				35595DE11ECF61BB002DB188 /* ListButtons.swift in Sources */,
 				3557B2E11ED17FA30023DB53 /* infoWindow.swift in Sources */,

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import GoogleMaps
+import RealmSwift
 
 struct MapPin {
     var latitude   : CGFloat
@@ -34,7 +35,7 @@ class Map : UIView {
     var camera            : GMSCameraPosition!
     var mapView           : GMSMapView!
     var marker            = GMSMarker()
-    var tempHardCodedData = [MapPin]()
+    var realmData         : Results<PinsModel>!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,14 +62,18 @@ extension Map {
     }
     
     fileprivate func addFakeData() {
-        tempHardCodedData = [
-            MapPin.init(50.41, 30.51, "Lorem Ipsum", "bottom"),
-            MapPin.init(50.40, 30.50, "Lorem Ipsum 2", "bottom"),
-            MapPin.init(50.39, 30.52, "Lorem Ipsum 3", "bottom")
-        ]
+//        tempHardCodedData = [
+//            MapPin.init(50.41, 30.51, "Lorem Ipsum", "bottom"),
+//            MapPin.init(50.40, 30.50, "Lorem Ipsum 2", "bottom"),
+//            MapPin.init(50.39, 30.52, "Lorem Ipsum 3", "bottom")
+//        ]
         
-        for pin in tempHardCodedData {
+        let realm = try! Realm()
+        realmData = realm.objects(PinsModel.self)
+        
+        for pin in realmData {
             let marker              = GMSMarker()
+            marker.userData         = pin
             marker.position         = CLLocationCoordinate2D(latitude: CLLocationDegrees(pin.latitude), longitude: CLLocationDegrees(pin.longitude))
             marker.map              = mapView
             marker.iconView         = iconView
@@ -81,10 +86,10 @@ extension Map {
 
 extension Map : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let view = InfoWindow.init(frame: CGRect.init(x: 0, y: 0, width: widthInfoWindow, height: heightInfoWindow), image: UIImage.init(named: "dataPin"), topText: "TOP Text", bottomText: "bottomText")
+        let pinObject = (marker.userData as! PinsModel)
+        let view      = InfoWindow.init(frame: CGRect.init(x: 0, y: 0, width: widthInfoWindow, height: heightInfoWindow), image: UIImage.init(named: pinObject.photo), topText: pinObject.titleText, bottomText: pinObject.bottomText)
         
         changePin(marker)
-        print("TAP Pin")
         
         return view
     }
