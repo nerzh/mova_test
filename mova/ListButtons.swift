@@ -102,6 +102,8 @@ extension ListButtonCell {
         ]
         
         NSLayoutConstraint.activate(initialConstraints)
+        self.layoutIfNeeded()
+        self.setNeedsLayout()
     }
 }
 

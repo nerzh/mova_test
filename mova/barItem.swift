@@ -44,7 +44,6 @@ extension BarItem {
         button.addSubview(label)
         
         setConstraints()
-        self.layoutIfNeeded()
     }
     
     private func setConstraints() {
@@ -70,6 +69,8 @@ extension BarItem {
         ]
         
         NSLayoutConstraint.activate(initialConstraints)
+        self.layoutIfNeeded()
+        self.setNeedsLayout()
     }
 }
 

@@ -49,8 +49,6 @@ extension MainBar {
         self.addSubview(barItemRight)
         
         setConstraints()
-        self.layoutIfNeeded()
-        self.setNeedsLayout()
     }
     
     private func setConstraints() {
@@ -76,6 +74,8 @@ extension MainBar {
         ]
         
         NSLayoutConstraint.activate(initialConstraints)
+        self.layoutIfNeeded()
+        self.setNeedsLayout()
     }
     
 //    MARK: Actions
