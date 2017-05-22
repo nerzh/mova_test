@@ -49,19 +49,30 @@ extension ListButton : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         cell.label.text = hardcodedArray[indexPath.row]
         cell.label.sizeToFit()
-        
+        print("my cell")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        widthOfCollectionViewCell.append(hardcodedArray[indexPath.row].widthOfLabel(font: font!))
-        
-        return CGSize(width: widthOfCollectionViewCell.last! + buttonPadding*2, height: heightButton)
+        return calcWidth(indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("TAP \(hardcodedArray[indexPath.row])")
+    }
+    
+    private func calcWidth(_ index: Int) -> CGSize {
+        var width : CGFloat!
+        
+        if widthOfCollectionViewCell.count > index {
+            width = widthOfCollectionViewCell[index]
+        } else {
+            width = hardcodedArray[index].widthOfLabel(font: font!)
+            widthOfCollectionViewCell.append(width)
+        }
+        
+        return CGSize(width: width + buttonPadding*2, height: heightButton)
     }
 }
 
