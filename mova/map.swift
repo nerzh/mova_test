@@ -11,20 +11,6 @@ import UIKit
 import GoogleMaps
 import RealmSwift
 
-struct MapPin {
-    var latitude   : CGFloat
-    var longitude  : CGFloat
-    var text       : String
-    var bottomText : String
-    
-    init(_ latitude: CGFloat, _ longitude: CGFloat, _ text: String?, _ bottomText: String?) {
-        self.latitude   = latitude
-        self.longitude  = longitude
-        self.text       = text ?? ""
-        self.bottomText = bottomText ?? ""
-    }
-}
-
 class Map : UIView {
     
     let widthInfoWindow   : CGFloat = 140
@@ -62,12 +48,6 @@ extension Map {
     }
     
     fileprivate func addFakeData() {
-//        tempHardCodedData = [
-//            MapPin.init(50.41, 30.51, "Lorem Ipsum", "bottom"),
-//            MapPin.init(50.40, 30.50, "Lorem Ipsum 2", "bottom"),
-//            MapPin.init(50.39, 30.52, "Lorem Ipsum 3", "bottom")
-//        ]
-        
         let realm = try! Realm()
         realmData = realm.objects(PinsModel.self)
         
