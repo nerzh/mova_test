@@ -45,11 +45,10 @@ extension ListButton : UICollectionViewDelegate, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath) as! ListButtonCell
-        
+        let cell        = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath) as! ListButtonCell
         cell.label.text = hardcodedArray[indexPath.row]
         cell.label.sizeToFit()
-        print("my cell")
+
         return cell
     }
     
