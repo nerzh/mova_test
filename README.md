@@ -14,6 +14,6 @@
 
 7.  По тапу на пин - показываем информацию, как на скриншоте. По тапу на view информации - просто нужно вывести в консоль данные об объекте User
 
-![](https://github.com/woodcrust/mova_test/tree/master/readme/screen.png)
+![](https://github.com/woodcrust/mova_test/blob/master/readme/screen.png?raw=true)
 
 Проект можно показать на GitHub/Bitbucket.
